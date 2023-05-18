@@ -42,10 +42,12 @@ def tweet():
 
     driver.get("https://twitter.com/i/flow/signup")
 
+    time.sleep(5)
+
     login_button=driver.find_element(By.XPATH,'//*[@id="layers"]/div[2]/div/div/div/div/div/div[2]/div[2]/div/div/div[2]/div[2]/div/div/div/div[7]/span[2]/span/span')
     login_button.click()
 
-    time.sleep(2)
+    time.sleep(4)
 
     username=driver.find_element(By.XPATH,'//*[@id="layers"]/div/div/div/div/div/div/div[2]/div[2]/div/div/div[2]/div[2]/div/div/div/div[5]/label/div/div[2]/div/input')
     username.send_keys(USER_NAME)
@@ -53,17 +55,17 @@ def tweet():
     next_button=driver.find_element(By.XPATH,'//*[@id="layers"]/div/div/div/div/div/div/div[2]/div[2]/div/div/div[2]/div[2]/div/div/div/div[6]/div')
     next_button.click()
 
-    time.sleep(1)
+    time.sleep(4)
 
     password=driver.find_element(By.XPATH,'//*[@id="layers"]/div/div/div/div/div/div/div[2]/div[2]/div/div/div[2]/div[2]/div[1]/div/div/div[3]/div/label/div/div[2]/div[1]/input')
     password.send_keys(PASSWORD)
 
-    time.sleep(1)
+    time.sleep(4)
 
     login_button=driver.find_element(By.XPATH,'//*[@id="layers"]/div/div/div/div/div/div/div[2]/div[2]/div/div/div[2]/div[2]/div[2]/div/div[1]/div/div/div/div')
     login_button.click()
 
-    time.sleep(3)
+    time.sleep(5)
     autotw1 = WebDriverWait(driver, 10).until(EC.element_to_be_clickable((By.CLASS_NAME, 'DraftEditor-root')))
     autotw1.click()
 
